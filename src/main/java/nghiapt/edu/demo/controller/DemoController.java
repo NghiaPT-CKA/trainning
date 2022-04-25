@@ -14,6 +14,7 @@ public class DemoController {
 	@RequestMapping("/")
 	   @ResponseBody
 	   public String hello() {
+		System.out.println("Demo Controller is Calling");
 	     return wellcome;
 	   }
 }

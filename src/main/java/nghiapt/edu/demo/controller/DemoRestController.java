@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import nghiapt.edu.demo.exception.ProductNotfoundException;
 import nghiapt.edu.demo.model.Product;
 
 // Define the RESTful web services (It serves JSON, XML and custom response)
@@ -38,5 +39,10 @@ public class DemoRestController {
 	public ResponseEntity<Object> createProduct(@RequestBody Product product) {
 		productRepo.put(product.getId(), product);
 		return new ResponseEntity<>("Product is created successfully", HttpStatus.CREATED);
+	}
+	
+	@RequestMapping(value = "/products/{id}", method = RequestMethod.PUT)
+	public ResponseEntity<Object> updateProduct() { 
+	   throw new ProductNotfoundException();
 	}
 }

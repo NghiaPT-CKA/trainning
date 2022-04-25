@@ -10,6 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>nghiapt.edu</groupId>
+	<packaging>jar</packaging>
 	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>demo</name>
@@ -19,6 +20,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<start-class>nghiapt.edu.demo.DemoApplication</start-class>
 	</properties>
 	
 	<dependencies>
